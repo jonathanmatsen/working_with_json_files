@@ -87,3 +87,11 @@ tags = hn_df['tags']
 mask = tags.apply(len) == 4
 
 four_tags = tags[mask]
+
+#extracting tags using apply with a lambda function
+# def extract_tag(l):
+#     return l[-1] if len(l) == 4 else None
+
+cleaned_tags = tags.apply(lambda l: l[-1] if len(l) == 4 else None)
+
+hn_df['tags'] = cleaned_tags
