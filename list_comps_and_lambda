@@ -67,3 +67,16 @@ def get_num_comments(d):
     return d['numComments']
 
 most_comments = max(hn_clean, key=get_num_comments)
+
+#lambda functions
+x = lambda obj: obj['numComments']
+
+# def multiply(a, b):
+#    return a * b
+
+multiply = lambda a, b: a*b
+
+# use lambda function to analyze JSON data
+hn_sorted_points = sorted(hn_clean, key=lambda d: d['points'], reverse=True)
+
+top_5_titles = [d['title'] for d in hn_sorted_points][:5]
