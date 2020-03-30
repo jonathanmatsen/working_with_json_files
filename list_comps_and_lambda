@@ -55,4 +55,9 @@ for dict_ in hn:
 hn_clean = [del_key(dict_, 'createdAtI') for dict_ in hn]
 
 #use list comprehension to transform and create lists
-urls = [d['url'] for d in hn_clean]
+urls = [d['url'] for d in hn_clean]k
+
+#use list comprehension to reduce a list
+thousand_points = [d for d in hn_clean if d['points'] > 1000]
+
+num_thousand_points = len(thousand_points)
