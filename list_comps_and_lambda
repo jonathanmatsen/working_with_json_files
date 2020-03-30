@@ -53,3 +53,6 @@ for dict_ in hn:
 #     hn_clean.append(new_d)
 
 hn_clean = [del_key(dict_, 'createdAtI') for dict_ in hn]
+
+#use list comprehension to transform and create lists
+urls = [d['url'] for d in hn_clean]
