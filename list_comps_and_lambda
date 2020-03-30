@@ -80,3 +80,10 @@ multiply = lambda a, b: a*b
 hn_sorted_points = sorted(hn_clean, key=lambda d: d['points'], reverse=True)
 
 top_5_titles = [d['title'] for d in hn_sorted_points][:5]
+
+#exploring tags using the apply function
+tags = hn_df['tags']
+
+mask = tags.apply(len) == 4
+
+four_tags = tags[mask]
