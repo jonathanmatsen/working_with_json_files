@@ -42,3 +42,14 @@ for dict_ in hn:
     key = 'createdAtI'
     clean = del_key(dict_, key)
     hn_clean.append(clean)
+
+#writing a list comprehension
+# LOOP VERSION
+#
+# hn_clean = []
+#
+# for d in hn:
+#     new_d = del_key(d, 'createdAtI')
+#     hn_clean.append(new_d)
+
+hn_clean = [del_key(dict_, 'createdAtI') for dict_ in hn]
